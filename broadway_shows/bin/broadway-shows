@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require './lib/broadway_shows'
+
+BroadwayShows::CLI.new.call

@@ -1,5 +1,2 @@
-require "broadway_shows/version"
-
-module BroadwayShows
-  # Your code goes here...
-end
+require_relative "./broadway_shows/version"
+require_relative "./broadway_shows/cli"
