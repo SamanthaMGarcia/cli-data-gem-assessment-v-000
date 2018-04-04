@@ -1,0 +1,5 @@
+-A command line interface for broadway shows starting with Broadway Tix
+-User is greeted
+-Show a list of shows with approximate prices
+-What price range were you hoping to stay within?
+-Puts based on price range indicated
