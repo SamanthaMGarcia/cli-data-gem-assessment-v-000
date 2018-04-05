@@ -16,9 +16,10 @@ class BroadwayShows::CLI
     5. Harry Clarke - from $59 - showing daily bar Monday
     6. The Play That Goes Wrong - from $30 - showing daily bar Monday and Wednesday
     7. The Band's Visit - from $49 - showing daily bar Monday
-    8. Bernadetter Peters in Hello, Dolly - from $39 - available 5/13
+    8. Bernadetter Peters in Hello, Dolly - from $39 - available through 5/13
     9. Angels in America: Millenium Approaches - from $50 - available through 5/31
     DOC
+    @shows = BroadwayShows::Show.today
   end
 
   def menu
@@ -47,6 +48,8 @@ class BroadwayShows::CLI
       puts "More info on show 9..."
     when "list"
       list_shows
+    else
+      puts "Not sure what you want, please type list or exit."
     end
   end
 end

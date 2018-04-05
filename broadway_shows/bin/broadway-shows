@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/broadway_shows'
+# require './lib/broadway_shows'
+require "bundler/setup"
+require "broadway_shows"
 
 BroadwayShows::CLI.new.call
