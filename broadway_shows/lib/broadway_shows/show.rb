@@ -1,5 +1,5 @@
 class BroadwayShows::Show
-  attr_accessor :name, :price, :availability, :url
+  attr_accessor :name, :blurb, :url
 
   def self.today
     self.scrape_shows
@@ -8,69 +8,107 @@ class BroadwayShows::Show
   def self.scrape_shows
     shows = []
 
-    shows << self.scrape_todaytix
+    shows << self.scrape_firstshow
+    shows << self.scrape_secondshow
+    shows << self.scrape_thirdshow
+    shows << self.scrape_fourthshow
+    shows << self.scrape_fifthshow
+    shows << self.scrape_sixthshow
+    shows << self.scrape_seventhshow
+    shows << self.scrape_eighthshow
+    shows << self.scrape_ninthshow
 
     shows
   end
 
-  def self.scrape_todaytix
-    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc"))
-    binding.pry
-  end
-end
+  def self.scrape_firstshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/392-school-of-rock"))
 
-# show_1 = self.new
-# show_1.name = "The Boys in the Band"
-# show_1.price = "from $89"
-# show_1.availability = "available through 5/30"
-# show_1.url = "https://www.todaytix.com/x/nyc"
-#
-# show_2 = self.new
-# show_2.name = "Harry Potter and the Cursed Child"
-# show_2.price = "from $40"
-# show_2.availability = "available through lottery"
-# show_2.url = "https://www.todaytix.com/x/nyc"
-#
-# show_3 = self.new
-# show_3.name = "Waitress"
-# show_3.price = "from $89"
-# show_3.availability = "showing daily bar Monday"
-# show_3.url = "https://www.todaytix.com/x/nyc"
-#
-# show_4 = self.new
-# show_4.name = "Mean Girls"
-# show_4.price = "from $99"
-# show_4.availability = "available through 5/31"
-# show_4.url = "https://www.todaytix.com/x/nyc"
-#
-# show_5 = self.new
-# show_5.name = "Harry Clarke"
-# show_5.price = "from $59"
-# show_5.availability = "showing daily bar Monday"
-# show_5.url = "https://www.todaytix.com/x/nyc"
-#
-# show_6 = self.new
-# show_6.name = "The Play That Goes Wrong"
-# show_6.price = "from $30"
-# show_6.availability = "showing daily bar Monday and Wednesday"
-# show_6.url = "https://www.todaytix.com/x/nyc"
-#
-# show_7 = self.new
-# show_7.name = "The Band's Visit"
-# show_7.price = "from $49"
-# show_7.availability = "showing daily bar Monday"
-# show_7.url = "https://www.todaytix.com/x/nyc"
-#
-# show_8 = self.new
-# show_8.name = "Bernadetter Peters in Hello, Dolly"
-# show_8.price = "from $39"
-# show_8.availability = "available through 5/13"
-# show_8.url = "https://www.todaytix.com/x/nyc"
-#
-# show_9 = self.new
-# show_9.name = "Angels in America: Millenium Approaches"
-# show_9.price = "from $50"
-# show_9.availability = "available through 5/31"
-# show_9.url = "https://www.todaytix.com/x/nyc"
-#
-# [show_1, show_2, show_3, show_4, show_5, show_6, show_7, show_8, show_9]
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_secondshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/7318-the-bands-visit"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_thirdshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/8728-harry-potter-and-the-cursed-child"))
+
+    show = self.new
+    show.name = doc.search("img._13fUdZ5A5X._3MQSZPDW8a._1rUNYHFkIY").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_fourthshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/1044-waitress"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_fifthshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/7774-mean-girls"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_sixthshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/9552-the-boys-in-the-band"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_seventhshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/3868-bernadette-in-hello-dolly"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_eighthshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/9145-saint-joan"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+  def self.scrape_ninthshow
+    doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc/shows/9249-harry-clarke"))
+
+    show = self.new
+    show.name = doc.search("h1._1ObTN67v78").text
+    show.blurb = doc.search("div.YXkXIt4pkN").text
+
+    show
+  end
+
+end

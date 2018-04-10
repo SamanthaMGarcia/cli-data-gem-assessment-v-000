@@ -10,7 +10,7 @@ class BroadwayShows::CLI
     puts "Today's Broadway Shows"
     @shows = BroadwayShows::Show.today
     @shows.each.with_index(1) do |show, i|
-      puts "#{i}. #{show.name} - #{show.price} - #{show.availability}"
+      puts "#{i}. #{show.name}"
     end
   end
 
@@ -22,7 +22,7 @@ class BroadwayShows::CLI
 
       if input.to_i > 0
         the_show = @shows[input.to_i-1]
-        puts "#{i}. #{the_show.name} - #{the_show.price} - #{the_show.availability}"
+        puts "#{i}. #{the_show.name} - #{the_show.blurb}"
       elsif input == "list"
         list_deals
       else
@@ -32,6 +32,6 @@ class BroadwayShows::CLI
 end
 
   def goodbye
-    puts "Check back in soon to see more deals on the best shows in town!"
+    puts "Check back in soon to see more about the best shows in town!"
     end
   end
