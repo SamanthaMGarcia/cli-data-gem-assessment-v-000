@@ -6,6 +6,8 @@ class BroadwayShows::Show
   end
 
   def self.getShows
+    shows = []
+
     doc = Nokogiri::HTML(open("https://www.todaytix.com/x/nyc"))
     titles = doc.search("div._2M6CitDx2A")
 
@@ -17,6 +19,8 @@ class BroadwayShows::Show
       blurb_doc = Nokogiri::HTML(open(blurb_url))
       show.blurb = blurb_doc.search("div.YXkXIt4pkN").text
 
+      shows << show
+      shows
     end
   end
 end

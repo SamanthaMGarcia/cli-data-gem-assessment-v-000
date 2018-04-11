@@ -9,7 +9,6 @@ class BroadwayShows::CLI
   def list_shows
     puts "Today's Broadway Shows"
     @shows = BroadwayShows::Show.today
-    binding.pry
     @shows.each.with_index(1) do |show, i|
       puts "#{i}. #{show.name}"
     end
