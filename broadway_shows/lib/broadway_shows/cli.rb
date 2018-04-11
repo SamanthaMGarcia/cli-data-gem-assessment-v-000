@@ -17,21 +17,21 @@ class BroadwayShows::CLI
   def menu
     input = nil
     while input != "exit"
-      puts "Enter the number of the show you would like to learn more about or type list to see all of the shows on or offer type exit."
+      puts "Enter the number of the show you would like to learn more about or type 'list' to see all of the shows on or offer type 'exit' to quit."
       input = gets.strip.downcase
 
       if input.to_i > 0
         the_show = @shows[input.to_i-1]
-        puts "#{i}. #{the_show.name} - #{the_show.blurb}"
+        puts "#{input}. #{the_show.name} - #{the_show.blurb}"
       elsif input == "list"
         list_shows
       else
-        puts "Not sure what you want, please type list or exit."
+        puts "Not sure what you want, please type 'list' or 'exit'."
     end
   end
 end
 
   def goodbye
     puts "Check back in soon to see more about the best shows in town!"
-    end
   end
+end
