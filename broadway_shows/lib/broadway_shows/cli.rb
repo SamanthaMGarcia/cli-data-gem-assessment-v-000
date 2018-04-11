@@ -9,6 +9,7 @@ class BroadwayShows::CLI
   def list_shows
     puts "Today's Broadway Shows"
     @shows = BroadwayShows::Show.today
+    binding.pry
     @shows.each.with_index(1) do |show, i|
       puts "#{i}. #{show.name}"
     end
@@ -24,7 +25,7 @@ class BroadwayShows::CLI
         the_show = @shows[input.to_i-1]
         puts "#{i}. #{the_show.name} - #{the_show.blurb}"
       elsif input == "list"
-        list_deals
+        list_shows
       else
         puts "Not sure what you want, please type list or exit."
     end
