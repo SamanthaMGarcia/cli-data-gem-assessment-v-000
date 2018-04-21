@@ -1,35 +1,39 @@
-# BroadwayShows
+Broadway Shows
+This Ruby Gem provides a CLI to view the 9 featured shows on TodayTix NYC and their short descriptions.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/broadway_shows`. To experiment with that code, run `bin/console` for an interactive prompt.
+Installation
+$ gem install broadway_shows
+Usage
+Type the below and follow the on screen prompts.
 
-TODO: Delete this and the text above, and describe your gem
+$ broadway_shows
+Development
+After checking out the repo, run bundle install to install dependencies. You can also run ./bin/broadway-shows for an interactive prompt that will allow you to experiment.
 
-## Installation
+To install this gem onto your local machine, run bundle exec rake install. To release a new version, update the version number in version.rb, and then run bundle exec rake release, which will create a git tag for the version, push git commits and tags, and push the .gem file to rubygems.org.
 
-Add this line to your application's Gemfile:
+Contributing
+Bug reports and pull requests are welcome on GitHub <a href="https://github.com/learn-co-students/cli-data-gem-assessment-v-000">here</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-```ruby
-gem 'broadway_shows'
-```
+License
+The gem is available as open source under the terms of the <a href= "https://opensource.org/licenses/MIT">The MIT License</a>.
 
-And then execute:
+Copyright (c) 2018 samanthamgarcia
 
-    $ bundle
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Or install it yourself as:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-    $ gem install broadway_shows
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/'SamanthaMGarcia'/broadway_shows.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
