@@ -21,7 +21,7 @@ class BroadwayShows::Show
       # blurb_doc = Nokogiri::HTML(open(blurb_url))
       # blurb = blurb_doc.search("div.YXkXIt4pkN").text
 
-      show = self.new(name, blurb)
+      show = self.new(name)
       # show = self.new(name, blurb)
     end
     self.all
