@@ -3,7 +3,7 @@ class BroadwayShows::Show
 
   @@all = []
 
-  def initialize(name, blurb=nil)
+  def initialize(name, blurb)
     @name = name
     @blurb = blurb
     @@all << self
