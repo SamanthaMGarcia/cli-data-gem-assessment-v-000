@@ -3,9 +3,9 @@ class BroadwayShows::Show
 
   @@all = []
 
-  def initialize(name)
+  def initialize(name, blurb=nil)
     @name = name
-    # @blurb = blurb
+    @blurb = blurb
     @@all << self
   end
   # def initialize(name, blurb)
