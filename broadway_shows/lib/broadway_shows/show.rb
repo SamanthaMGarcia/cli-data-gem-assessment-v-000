@@ -8,6 +8,11 @@ class BroadwayShows::Show
     @blurb = blurb
     @@all << self
   end
+  # def initialize(name, blurb)
+  #   @name = name
+  #   @blurb = blurb
+  #   @@all << self
+  # end
 
   def self.get_shows
 
