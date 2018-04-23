@@ -23,7 +23,6 @@ class BroadwayShows::Show
 
       show = self.new(name, blurb)
     end
-    binding.pry
     self.all
   end
 
