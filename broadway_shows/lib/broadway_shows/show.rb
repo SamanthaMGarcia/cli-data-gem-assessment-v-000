@@ -22,6 +22,7 @@ class BroadwayShows::Show
       # blurb = blurb_doc.search("div.YXkXIt4pkN").text
 
       show = self.new(name, blurb)
+      # show = self.new(name, blurb)
     end
     self.all
   end
