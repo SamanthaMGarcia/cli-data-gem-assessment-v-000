@@ -17,12 +17,12 @@ class BroadwayShows::Show
     everything = titles.each do |title|
       name = title.css("h2").text
 
-      # blurb_url = "https://www.todaytix.com#{ title.css('a')[0].attributes["href"].value }"
-      # blurb_doc = Nokogiri::HTML(open(blurb_url))
-      # blurb = blurb_doc.search("div.YXkXIt4pkN").text
+      blurb_url = "https://www.todaytix.com#{ title.css('a')[0].attributes["href"].value }"
+      blurb_doc = Nokogiri::HTML(open(blurb_url))
+      blurb = blurb_doc.search("div.YXkXIt4pkN").text
 
       show = self.new(name)
-      # show = self.new(name, blurb)
+      show = self.new(name, blurb)
     end
     self.all
   end
